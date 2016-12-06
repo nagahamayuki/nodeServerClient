@@ -13,6 +13,8 @@
 この記事を参照
 http://blog.namiking.net/post/2016/02/react-server-using-webpack/
 
+
+
 **■ クライアントサイドレンダリング**
 
 *$ npm install --save react react-dom*  
@@ -36,6 +38,7 @@ server.jsでは、
 </div>  
 
 こんな感じでクライアントサイドのレンダリングを読み込んでいる。  
+
 
 
 **サーバーサイドレンダリング**

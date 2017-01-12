@@ -14,11 +14,11 @@
 http://blog.namiking.net/post/2016/02/react-server-using-webpack/
 
 
-
+  
 **■ クライアントサイドレンダリング**
 
-*$ npm install --save react react-dom*  
-*$ npm install --save-dev webpack babel-loader babel-preset-es2015 babel-preset-react*  
+`$ npm install --save react react-dom`  
+`$ npm install --save-dev webpack babel-loader babel-preset-es2015 babel-preset-react`
 
 *webpackの構成*
 

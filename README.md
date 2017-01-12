@@ -31,11 +31,13 @@ app.use(express.static('clientside'))
 プリレンダする内容をクライアント側の時に試したtest.htmlと同じような記述に変更する。  
 
 server.jsでは、  
-<div>  
-  <p>サーバーサイドレンダリング</p>  
-  <div id="client"></div>  
-  <script src="bundle.js" /> ← クライアントサイドレンダリング
-</div>  
+
+```
+ReactDOM.render(
+  <p>クライアントサイドレンダリング</p>,
+  document.getElementById('client')
+)
+```
 
 こんな感じでクライアントサイドのレンダリングを読み込んでいる。  
 
@@ -50,3 +52,32 @@ server.jsでは、
 
 server.jsにてexpressでサーバーを立てて、  
 そこからサーバーサイドレンダリング。
+
+```
+app.get('/', (req, res) => {
+  res.send(
+    ReactDOMServer.renderToString(
+      <div>
+        <p>サーバーサイドレンダリング</p>
+        <div id="client"></div>
+        <script src="bundle.js" />
+      </div>
+    )
+  )
+})
+
+// start listen
+app.listen(3000, () => {
+  console.log('Example app listening on port 3000!');
+})
+```
+
+このようにserver.jsにてnodeサーバーでサーバーサイドレンダリングをしています。
+この時 id=client の場所に、クライアントサイドのレンダリングを表示します。
+
+
+ただし、この時  
+`$ npm start`  
+をしても、babel-nodeコマンドが働いて、http://localhost:3000 にてアプリケーションを見ることはできるが、  
+`$ npm run build`  
+をしなければ、内容は変わらない。つまりreload機能が付いていない。

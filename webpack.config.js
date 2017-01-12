@@ -5,7 +5,7 @@ module.exports = {
     client: "./clientside/app.js",
   },
   output: {
-    filename: './clientside/bundle.js'
+    filename: './clientside/dist/bundle.js'
   },
   module: {
     loaders: [

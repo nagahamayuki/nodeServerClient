@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
       <div>
         <p>サーバーサイドレンダリング</p>
         <div id="client"></div>
-        <script src="bundle.js" />
+        <script src="./dist/bundle.js" />
       </div>
     )
   )

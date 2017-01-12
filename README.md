@@ -14,6 +14,12 @@
 http://blog.namiking.net/post/2016/02/react-server-using-webpack/
 
 
+`$ npm start`  
+コマンドで、サーバーからのReactを参照。(製品版)
+
+`$ npm run client`  
+コマンドで、クライアントサイドのReactを、ブラウザリロード付きで開発。(開発版)
+
   
 **■ クライアントサイドレンダリング**
 

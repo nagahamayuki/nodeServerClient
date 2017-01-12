@@ -20,7 +20,7 @@ http://blog.namiking.net/post/2016/02/react-server-using-webpack/
 `$ npm run client`  
 コマンドで、クライアントサイドのReactを、ブラウザリロード付きで開発。(開発版)
 
-  
+
 **■ クライアントサイドレンダリング**
 
 `$ npm install --save react react-dom`  
@@ -32,7 +32,7 @@ clientside ディレクトリの app.js を起点として、
 同じディレクトリにbundle.js
 
 server.js では  
-app.use(express.static('clientside'))
+`app.use(express.static('clientside'))`  
 で、publicディレクトリ以下のファイルを静的ファイルとして、読み込み可能として、  
 プリレンダする内容をクライアント側の時に試したtest.htmlと同じような記述に変更する。  
 
@@ -51,8 +51,8 @@ ReactDOM.render(
 
 **サーバーサイドレンダリング**
 
-*$npm install --save express*  
-*$npm install --save-dev babel-cli*  
+`$npm install --save express`    
+`$npm install --save-dev babel-cli`    
 
 *こちらはwebpackの外*
 

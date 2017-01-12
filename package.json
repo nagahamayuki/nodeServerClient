@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "babel-node server.js"
+    "start": "babel-node server.js",
+    "client": "webpack-dev-server --hot --inline"
   },
   "keywords": [],
   "author": "",
